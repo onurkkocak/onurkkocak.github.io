@@ -1,13 +1,23 @@
-
+import Form from './components/Form';
+import Info from './components/Info';
+import React from 'react';
 import './App.css';
+import { useState } from 'react';
+
+
+
 
 function App() {
-  return (
+  const [info,setInfo] = useState([])
+  const [state, setState] = useState(false)
+    return (
    <>
-   <div>test commit</div>
-   <header>Header</header>
-   <nav>bakalım burada ne olacak </nav>
+   
+    <Form info ={info} setInfo={setInfo} setState={setState}/>
+    <Info info ={info} setInfo={setInfo} state={state} />
+ 
    </>
+  
   );
 }
 
